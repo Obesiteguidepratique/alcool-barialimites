@@ -1,0 +1,73 @@
+{
+  "date_maj": "13/09/2026",
+  "news": [
+    {
+      "date": "13/09/2026",
+      "contenu": "**RC7** — Ajout des  boissons énergisantes"
+    },
+    {
+      "date": "03/09/2026",
+      "contenu": "**RC6** — Refonte des fonctions Cocktails & Plats/desserts contenant de l'alcool"
+    },
+    {
+      "date": "16/07/2026",
+      "contenu": "**RC5** — 🥤 Dégustation systématique, scission autour des repas, marges réglables"
+    },
+    {
+      "date": "10/07/2026",
+      "contenu": "**RC4** — 💭 Ajout de la fonction Sentiments"
+    },
+    {
+      "date": "07/07/2026",
+      "contenu": "**RC3** — 🐢 Ajout des fonctions Déguster / Étaler"
+    },
+    {
+      "date": "04/07/2026",
+      "contenu": "**RC2** — Ajout de ⏳ Étaler dans le temps"
+    },
+    {
+      "date": "23/06/2026",
+      "contenu": "**RC1** — 🚀 Version candidate"
+    },
+    {
+      "date": "23/06/2026",
+      "contenu": "**β10** — 💾 Sauvegarde de sessions"
+    },
+    {
+      "date": "22/06/2026",
+      "contenu": "**β9** — ⏰ Gestion du temps"
+    },
+    {
+      "date": "20/06/2026",
+      "contenu": "**β8** — 🥃 Maquettes de verres"
+    },
+    {
+      "date": "15/06/2026",
+      "contenu": "**β7** — 🍽️ Prise alimentaire contenant de l'alcool"
+    },
+    {
+      "date": "13/06/2026",
+      "contenu": "**β6** — Interface, sécurité routière, sans alcool, contexte de session & journal enrichi"
+    },
+    {
+      "date": "06/06/2026",
+      "contenu": "**β5** — 🍽️ Prise alimentaire"
+    },
+    {
+      "date": "06/06/2026",
+      "contenu": "**β4** — 📊 Historique des consommations"
+    },
+    {
+      "date": "29/05/2026",
+      "contenu": "**β3** — Multi-boissons & délai d'absorption"
+    },
+    {
+      "date": "29/05/2026",
+      "contenu": "**β2** — Application mobile (PWA)"
+    },
+    {
+      "date": "29/05/2026",
+      "contenu": "**α1** — Maquette fonctionnelle initiale"
+    }
+  ]
+}
