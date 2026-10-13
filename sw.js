@@ -1,7 +1,7 @@
 // Alcool Barialimites — Service Worker
-// RC6 Build 647 · 10/09/2026
-const CACHE_NAME = 'barialimites-v647';
-const ASSETS = ['./index.html','./cocktails.js','./plats.js','./manifest.json','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png'];
+// RC7 Build 686 · 21/09/2026
+const CACHE_NAME = 'barialimites-v686';
+const ASSETS = ['./index.html','./cocktails.js','./plats.js','./verres.js','./boissons-data.js','./dashboard.js','./journal.js','./alarmes.js','./News.json','./manifest.json','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png'];
 self.addEventListener('install', event => { event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))); self.skipWaiting(); });
 self.addEventListener('activate', event => { event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 let _swTimers = [];
@@ -11,7 +11,7 @@ self.addEventListener('message', event => {
 });
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
-  const isHTML = url.pathname.endsWith('.html') || url.pathname.endsWith('/');
-  if (isHTML) { event.respondWith(fetch(event.request).then(response => { if (response && response.status === 200) { const clone = response.clone(); caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone)); } return response; }).catch(() => caches.match(event.request))); }
+  const isNetFirst = url.pathname.endsWith('.html') || url.pathname.endsWith('/') || url.pathname.endsWith('News.json');
+  if (isNetFirst) { event.respondWith(fetch(event.request).then(response => { if (response && response.status === 200) { const clone = response.clone(); caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone)); } return response; }).catch(() => caches.match(event.request))); }
   else { event.respondWith(caches.match(event.request).then(cached => { if (cached) return cached; return fetch(event.request).then(response => { if (response && response.status === 200) { const clone = response.clone(); caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone)); } return response; }).catch(() => caches.match('./index.html')); })); }
 });
